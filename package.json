@@ -1,14 +1,24 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "![This command line applicaiton will generate some HTML to display a team structure that is defined using this applicaiton](https://img.shields.io/badge/license-MIT-blue.svg)",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Chris Aylen",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.16.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisAylen/Note-Taker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChrisAylen/Note-Taker/issues"
+  },
+  "homepage": "https://github.com/ChrisAylen/Note-Taker#readme"
 }
