@@ -16,8 +16,8 @@ notes.get('/', (req, res) =>
 
 notes.post('/', (req, res) => {
     // Destructuring assignment for the items in req.body
-    for (let info of Object.entries(req.body)) {
-        const { text, title } = info;
+    // for (let info of Object.entries(req.body)) {
+        const { text, title } = req.body;
         //let test = req.body[0].text;
 
 
@@ -34,14 +34,14 @@ notes.post('/', (req, res) => {
 
             const response = {
                 status: 'success',
-                body: newFeedback,
+                body: newNote,
             };
 
             res.json(response);
         } else {
-            res.json('Error in posting feedback');
+            res.json('Error in posting note');
         }
-    }
+    //}
 });
 //Each note should have a unique id
 
