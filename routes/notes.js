@@ -1,6 +1,11 @@
 const notes = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
-const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
+//const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
+const {
+    readFromFile,
+    readAndAppend,
+    writeToFile,
+  } = require('../helpers/fsUtils');
 
 
 // api/notes routes
@@ -46,7 +51,21 @@ notes.post('/', (req, res) => {
 //Each note should have a unique id
 
 //Delete /api/notes/:id
-
+notes.delete('/:Id', (req, res) => {
+    const Id = req.params.id;
+    readFromFile('./db/db.json')
+      .then((data) => JSON.parse(data))
+      .then((json) => {
+        // Make a new array of all notes except the one with the ID provided in the URL
+        const result = json.filter((note) => note.note_id !== Id);
+  
+        // Save that array to the filesystem
+        writeToFile('./db/notes.json', result);
+  
+        // Respond to the DELETE request
+        res.json(`Item ${Id} has been deleted 🗑️`);
+      });
+  });
 
 
 module.exports = notes;
