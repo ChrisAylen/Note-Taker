@@ -6,7 +6,7 @@
     
 ## Description
     
-
+The application allows the user to add and delete notes.
 
 ## Table of Contents 
 
@@ -16,36 +16,38 @@
 
 * [Screenshot](#screenshots)
 
-* [Video](#video)
-
-* [Tests](#tests)
+* [Deployed Version](#Deployment)
 
 * [Questions](#questions)
 
 ## Installation
     
-npm i
+'npm i' to install the necessary dependencies.
     
 ## Usage
     
 
-    
+
+When the user adds a note, the note is added to the end of the list.
+
+When the user deletes a note, the note is deleted from the list.
+
+When the user selects a note, the note is displayed.
+
+When the user presses the plus sign, an new note screen is displayed (if the user weas already viewing another note).
+
 ## Screenshots
 
-![alt screen.png]()
+![alt Landing Page](./public/assets/images/landing.PNG)
+![alt Landing Page](./public/assets/images/notes.PNG)))
 
-## Video
+## Deployment
 
-[Demostration Video]()
-    
-
+[Deployed Version](https://calm-headland-94675.herokuapp.com/)
+   
 ## License
     
 This project is licenced under MIT
-
-## Tests
-    
-npm run tests
 
 ## Questions
 
