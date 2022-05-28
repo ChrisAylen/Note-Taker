@@ -14,6 +14,8 @@ The application allows the user to add and delete notes.
 
 * [Usage](#usage)
 
+* [API](#API)
+
 * [Screenshot](#screenshots)
 
 * [Deployed Version](#Deployment)
@@ -25,8 +27,6 @@ The application allows the user to add and delete notes.
 'npm i' to install the necessary dependencies.
     
 ## Usage
-    
-
 
 When the user adds a note, the note is added to the end of the list.
 
@@ -35,6 +35,40 @@ When the user deletes a note, the note is deleted from the list.
 When the user selects a note, the note is displayed.
 
 When the user presses the plus sign, an new note screen is displayed (if the user weas already viewing another note).
+
+## API
+
+    * GET /api/notes
+    * GET /api/notes/:id
+    * POST /api/notes
+    * DELETE /api/notes/:id
+
+### Get all Notes
+```
+curl --request GET \
+  --url https://calm-headland-94675.herokuapp.com/api/notes/
+```
+### Get note by id
+```
+curl --request GET \
+  --url https://calm-headland-94675.herokuapp.com/api/notes/[id]
+```
+### Add a note
+```
+curl --request POST \
+  --url https://calm-headland-94675.herokuapp.com/api/notes/ \
+  --header 'Content-Type: application/json' \
+  --data '{
+		"title": "Another amazing test",
+		"text": "This test is quite amazing"
+	}'
+```
+### Delete a note
+```
+curl --request DELETE \
+  --url https://calm-headland-94675.herokuapp.com/api/notes/[id]
+```
+
 
 ## Screenshots
 
