@@ -1,6 +1,5 @@
 const notes = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
-//const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
 const {
     readFromFile,
     readAndAppend,
@@ -29,11 +28,7 @@ notes.get('/:id', (req, res) => {
 //POST route receives a new note to save on the request body, add it to the db.json file, and then return the new note to the client
 
 notes.post('/', (req, res) => {
-    // Destructuring assignment for the items in req.body
-    // for (let info of Object.entries(req.body)) {
     const { text, title } = req.body;
-    //let test = req.body[0].text;
-
 
     // If all the required properties are present
     if (title && text) {
@@ -57,7 +52,6 @@ notes.post('/', (req, res) => {
     }
     //}
 });
-//Each note should have a unique id
 
 //Delete /api/notes/:id
 notes.delete('/:id', (req, res) => {
