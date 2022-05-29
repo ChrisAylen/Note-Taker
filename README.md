@@ -2,7 +2,7 @@
     
 # Team Profile Generator
 
-![This command line applicaiton will generate some HTML to display a team structure that is defined using this applicaiton](https://img.shields.io/badge/license-MIT-blue.svg)
+![](https://img.shields.io/badge/license-MIT-blue.svg)
     
 ## Description
     
